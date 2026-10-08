@@ -7,6 +7,7 @@
     <title>Conversations - Web101 Fil Rouge</title>
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/conversation.css">
+    <script src="js/conversation.js" defer></script>
 </head>
 <body>
     <header class="site-header">
@@ -19,47 +20,47 @@
         </div>
     </header>
 
-    <main class="container conversation-layout">
+    <main class="container conversation-layout" data-conversation-page>
         <aside class="conversation-sidebar" aria-label="Conversations">
             <div class="section-heading">
                 <h1>Conversations</h1>
-                <button class="button button-small button-primary" type="button">Nouvelle conversation</button>
+                <button class="button button-small button-primary" type="button" data-action="new-conversation">Nouvelle conversation</button>
             </div>
-            <ul class="conversation-list">
+            <ul class="conversation-list" id="conversation-list">
                 <li>
-                    <button class="conversation-item is-active" type="button">
-                        <strong>Camille Martin</strong>
-                        <span>À bientôt !</span>
-                        <time datetime="2026-09-24T12:45">12:45</time>
+                    <button class="conversation-item is-active" type="button" data-conversation-id="camille-martin">
+                        <strong data-conversation-name>Camille Martin</strong>
+                        <span data-conversation-preview>À bientôt !</span>
+                        <time datetime="2026-09-24T12:45" data-conversation-time>12:45</time>
                     </button>
                 </li>
                 <li>
-                    <button class="conversation-item" type="button">
-                        <strong>Alexandre Roy</strong>
-                        <span>Merci pour ton aide.</span>
-                        <time datetime="2026-09-23T18:20">Hier</time>
+                    <button class="conversation-item" type="button" data-conversation-id="alexandre-roy">
+                        <strong data-conversation-name>Alexandre Roy</strong>
+                        <span data-conversation-preview>Merci pour ton aide.</span>
+                        <time datetime="2026-09-23T18:20" data-conversation-time>Hier</time>
                     </button>
                 </li>
                 <li>
-                    <button class="conversation-item" type="button">
-                        <strong>Sophie Tremblay</strong>
-                        <span>On se reparle demain.</span>
-                        <time datetime="2026-09-22T09:10">22 sept.</time>
+                    <button class="conversation-item" type="button" data-conversation-id="sophie-tremblay">
+                        <strong data-conversation-name>Sophie Tremblay</strong>
+                        <span data-conversation-preview>On se reparle demain.</span>
+                        <time datetime="2026-09-22T09:10" data-conversation-time>22 sept.</time>
                     </button>
                 </li>
             </ul>
         </aside>
 
-        <section class="chat-panel" aria-labelledby="conversation-title">
+        <section class="chat-panel" aria-labelledby="conversation-title" data-chat-panel>
             <header class="chat-header">
                 <div>
                     <p class="eyebrow">Conversation</p>
                     <h2 id="conversation-title">Camille Martin</h2>
                 </div>
-                <span class="status">En ligne</span>
+                <span class="status" data-chat-status>En ligne</span>
             </header>
 
-            <ol class="message-list">
+            <ol class="message-list" id="message-list">
                 <li class="message message-received">
                     <p class="message-author">Camille Martin</p>
                     <p class="message-content">Bonjour ! Comment vas-tu ?</p>
@@ -77,9 +78,9 @@
                 </li>
             </ol>
 
-            <form class="message-form">
+            <form class="message-form" id="message-form">
                 <label class="sr-only" for="message-content">Contenu du message</label>
-                <input type="text" id="message-content" name="message" placeholder="Écrire un message..." autocomplete="off" required>
+                <input type="text" id="message-content" name="message" placeholder="Écrire un message..." autocomplete="off" required data-message-input>
                 <button class="button button-primary" type="submit">Envoyer</button>
             </form>
         </section>
