@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Connexion à Web101 Fil Rouge">
+    <title>Connexion - Web101 Fil Rouge</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <main class="auth-page">
+        <section class="auth-card" aria-labelledby="page-title">
+            <p class="eyebrow">Web101 Fil Rouge</p>
+            <h1 id="page-title">Bienvenue</h1>
+            <p class="intro">Connectez-vous pour retrouver vos conversations.</p>
+
+            <form class="stack-form" action="conversation.html" method="get">
+                <div class="field">
+                    <label for="email">Adresse courriel</label>
+                    <input type="email" id="email" name="email" autocomplete="email" required>
+                </div>
+
+                <div class="field">
+                    <label for="password">Mot de passe</label>
+                    <input type="password" id="password" name="password" autocomplete="current-password" required>
+                </div>
+
+                <label class="checkbox">
+                    <input type="checkbox" name="remember">
+                    <span>Se souvenir de moi</span>
+                </label>
+
+                <button class="button button-primary" type="submit">Se connecter</button>
+            </form>
+
+            <div class="auth-links">
+                <a class="link-button" href="#register-section">
+                    S'inscrire
+                </a>
+                <a class="link-button" href="#forgotten-password-section">
+                    Mot de passe oublié ?
+                </a>
+            </div>
+
+            <section class="toggle-section" id="register-section">
+                <h2>Créer un compte</h2>
+                <form class="stack-form" action="#" method="post">
+                    <div class="field">
+                        <label for="register-name">Nom</label>
+                        <input type="text" id="register-name" name="name" autocomplete="name">
+                    </div>
+                    <div class="field">
+                        <label for="register-email">Adresse courriel</label>
+                        <input type="email" id="register-email" name="email" autocomplete="email">
+                    </div>
+                    <div class="field">
+                        <label for="register-password">Mot de passe</label>
+                        <input type="password" id="register-password" name="password" autocomplete="new-password">
+                    </div>
+                    <button class="button button-secondary" type="submit">Créer mon compte</button>
+                </form>
+            </section>
+
+            <section class="toggle-section" id="forgotten-password-section">
+                <h2>Récupérer mon mot de passe</h2>
+                <form class="stack-form" action="#" method="post">
+                    <div class="field">
+                        <label for="forgotten-email">Adresse courriel</label>
+                        <input type="email" id="forgotten-email" name="email" autocomplete="email">
+                    </div>
+                    <button class="button button-secondary" type="submit">Envoyer le lien</button>
+                </form>
+            </section>
+        </section>
+    </main>
+</body>
+</html>

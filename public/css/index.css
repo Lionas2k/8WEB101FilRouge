@@ -1,0 +1,75 @@
+.auth-page {
+    display: grid;
+    min-height: 100vh;
+    place-items: center;
+    padding: 2rem 1rem;
+}
+
+.auth-card {
+    width: min(100%, 460px);
+    padding: 2rem;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 0.75rem;
+    box-shadow: var(--shadow);
+}
+
+.auth-card h1 {
+    font-size: 2rem;
+}
+
+.stack-form {
+    display: grid;
+    gap: 1rem;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-muted);
+}
+
+.checkbox input {
+    width: auto;
+}
+
+.auth-links {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 1.25rem;
+}
+
+.link-button {
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: var(--color-primary);
+}
+
+.toggle-section {
+    display: none;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--color-border);
+}
+
+.toggle-section:target {
+    display: block;
+}
+
+.toggle-section h2 {
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 450px) {
+    .auth-card {
+        padding: 1.25rem;
+    }
+
+    .auth-links {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}

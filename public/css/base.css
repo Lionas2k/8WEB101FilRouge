@@ -1,0 +1,221 @@
+:root {
+    color-scheme: light;
+    --color-background: #f5f7fb;
+    --color-surface: #ffffff;
+    --color-text: #1f2937;
+    --color-muted: #6b7280;
+    --color-primary: #2563eb;
+    --color-primary-dark: #1d4ed8;
+    --color-border: #e5e7eb;
+    --color-danger: #b91c1c;
+    --color-danger-background: #fef2f2;
+    --shadow: 0 8px 24px rgba(31, 41, 55, 0.08);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    background: var(--color-background);
+    color: var(--color-text);
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+a:hover,
+a:focus-visible {
+    text-decoration: underline;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+.container {
+    width: min(100% - 2rem, 1100px);
+    margin: 0 auto;
+}
+
+.site-header {
+    background: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 4rem;
+}
+
+.header-content nav {
+    display: flex;
+    gap: 1.25rem;
+}
+
+.logo {
+    color: var(--color-text);
+    font-weight: 700;
+}
+
+.page-content {
+    padding: 2rem 0 4rem;
+}
+
+.page-intro {
+    margin: 1.5rem 0 2rem;
+}
+
+h1,
+h2,
+p {
+    margin-top: 0;
+}
+
+h1 {
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    font-size: 1.25rem;
+}
+
+.eyebrow {
+    margin-bottom: 0.5rem;
+    color: var(--color-primary);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.muted,
+.intro,
+.page-intro p:last-child {
+    color: var(--color-muted);
+}
+
+.panel {
+    padding: 1.5rem;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 0.75rem;
+    box-shadow: var(--shadow);
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.field label {
+    font-weight: 700;
+}
+
+input {
+    width: 100%;
+    padding: 0.7rem 0.8rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 0.4rem;
+    background: var(--color-surface);
+    color: var(--color-text);
+}
+
+input:focus {
+    border-color: var(--color-primary);
+    outline: 3px solid rgba(37, 99, 235, 0.15);
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.7rem;
+    padding: 0.6rem 1rem;
+    border: 1px solid transparent;
+    border-radius: 0.4rem;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+}
+
+.button:hover,
+.button:focus-visible {
+    text-decoration: none;
+}
+
+.button-primary {
+    background: var(--color-primary);
+    color: #fff;
+}
+
+.button-primary:hover,
+.button-primary:focus-visible {
+    background: var(--color-primary-dark);
+}
+
+.button-secondary {
+    border-color: var(--color-border);
+    background: var(--color-surface);
+    color: var(--color-text);
+}
+
+.button-muted {
+    border-color: var(--color-border);
+    background: #f8fafc;
+    color: var(--color-muted);
+}
+
+.button-danger {
+    background: var(--color-danger);
+    color: #fff;
+}
+
+.button-small {
+    min-height: 2.2rem;
+    padding: 0.35rem 0.65rem;
+    font-size: 0.85rem;
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+@media (max-width: 600px) {
+    .header-content {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 0.75rem 0;
+    }
+
+    .header-content nav {
+        gap: 1rem;
+    }
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vos conversations Web101 Fil Rouge">
+    <title>Conversations - Web101 Fil Rouge</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/conversation.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-content">
+            <a class="logo" href="conversation.html">Web101 Fil Rouge</a>
+            <nav aria-label="Navigation principale">
+                <a href="contact.html">Contacts</a>
+                <a href="parametre.html">Paramètres</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container conversation-layout">
+        <aside class="conversation-sidebar" aria-label="Conversations">
+            <div class="section-heading">
+                <h1>Conversations</h1>
+                <button class="button button-small button-primary" type="button">Nouvelle conversation</button>
+            </div>
+            <ul class="conversation-list">
+                <li>
+                    <button class="conversation-item is-active" type="button">
+                        <strong>Camille Martin</strong>
+                        <span>À bientôt !</span>
+                        <time datetime="2026-09-24T12:45">12:45</time>
+                    </button>
+                </li>
+                <li>
+                    <button class="conversation-item" type="button">
+                        <strong>Alexandre Roy</strong>
+                        <span>Merci pour ton aide.</span>
+                        <time datetime="2026-09-23T18:20">Hier</time>
+                    </button>
+                </li>
+                <li>
+                    <button class="conversation-item" type="button">
+                        <strong>Sophie Tremblay</strong>
+                        <span>On se reparle demain.</span>
+                        <time datetime="2026-09-22T09:10">22 sept.</time>
+                    </button>
+                </li>
+            </ul>
+        </aside>
+
+        <section class="chat-panel" aria-labelledby="conversation-title">
+            <header class="chat-header">
+                <div>
+                    <p class="eyebrow">Conversation</p>
+                    <h2 id="conversation-title">Camille Martin</h2>
+                </div>
+                <span class="status">En ligne</span>
+            </header>
+
+            <ol class="message-list">
+                <li class="message message-received">
+                    <p class="message-author">Camille Martin</p>
+                    <p class="message-content">Bonjour ! Comment vas-tu ?</p>
+                    <time datetime="2026-09-24T12:42">12:42</time>
+                </li>
+                <li class="message message-sent">
+                    <p class="message-author">Vous</p>
+                    <p class="message-content">Très bien, merci ! Et toi ?</p>
+                    <time datetime="2026-09-24T12:44">12:44</time>
+                </li>
+                <li class="message message-received">
+                    <p class="message-author">Camille Martin</p>
+                    <p class="message-content">À bientôt !</p>
+                    <time datetime="2026-09-24T12:45">12:45</time>
+                </li>
+            </ol>
+
+            <form class="message-form">
+                <label class="sr-only" for="message-content">Contenu du message</label>
+                <input type="text" id="message-content" name="message" placeholder="Écrire un message..." autocomplete="off" required>
+                <button class="button button-primary" type="submit">Envoyer</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
