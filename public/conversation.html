@@ -26,57 +26,11 @@
                 <h1>Conversations</h1>
                 <button class="button button-small button-primary" type="button" data-action="new-conversation">Nouvelle conversation</button>
             </div>
-            <ul class="conversation-list" id="conversation-list">
-                <li>
-                    <button class="conversation-item is-active" type="button" data-conversation-id="camille-martin">
-                        <strong data-conversation-name>Camille Martin</strong>
-                        <span data-conversation-preview>À bientôt !</span>
-                        <time datetime="2026-09-24T12:45" data-conversation-time>12:45</time>
-                    </button>
-                </li>
-                <li>
-                    <button class="conversation-item" type="button" data-conversation-id="alexandre-roy">
-                        <strong data-conversation-name>Alexandre Roy</strong>
-                        <span data-conversation-preview>Merci pour ton aide.</span>
-                        <time datetime="2026-09-23T18:20" data-conversation-time>Hier</time>
-                    </button>
-                </li>
-                <li>
-                    <button class="conversation-item" type="button" data-conversation-id="sophie-tremblay">
-                        <strong data-conversation-name>Sophie Tremblay</strong>
-                        <span data-conversation-preview>On se reparle demain.</span>
-                        <time datetime="2026-09-22T09:10" data-conversation-time>22 sept.</time>
-                    </button>
-                </li>
-            </ul>
+            <ul class="conversation-list" id="conversation-list" aria-live="polite"></ul>
         </aside>
 
         <section class="chat-panel" aria-labelledby="conversation-title" data-chat-panel>
-            <header class="chat-header">
-                <div>
-                    <p class="eyebrow">Conversation</p>
-                    <h2 id="conversation-title">Camille Martin</h2>
-                </div>
-                <span class="status" data-chat-status>En ligne</span>
-            </header>
-
-            <ol class="message-list" id="message-list">
-                <li class="message message-received">
-                    <p class="message-author">Camille Martin</p>
-                    <p class="message-content">Bonjour ! Comment vas-tu ?</p>
-                    <time datetime="2026-09-24T12:42">12:42</time>
-                </li>
-                <li class="message message-sent">
-                    <p class="message-author">Vous</p>
-                    <p class="message-content">Très bien, merci ! Et toi ?</p>
-                    <time datetime="2026-09-24T12:44">12:44</time>
-                </li>
-                <li class="message message-received">
-                    <p class="message-author">Camille Martin</p>
-                    <p class="message-content">À bientôt !</p>
-                    <time datetime="2026-09-24T12:45">12:45</time>
-                </li>
-            </ol>
+            <ol class="message-list" id="message-list" aria-live="polite"></ol>
 
             <form class="message-form" id="message-form">
                 <label class="sr-only" for="message-content">Contenu du message</label>
